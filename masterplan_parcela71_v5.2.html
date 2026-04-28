@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Master Plan v4 – Parcela 71, Isla de Maipo</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,600;1,300&family=IBM+Plex+Sans:wght@300;400;600&display=swap');
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#1c1c22; font-family:'IBM Plex Sans',sans-serif; color:#e8e0d0; padding:18px; }
+  .wrapper { max-width:900px; margin:0 auto; }
+
+  .header {
+    display:flex; justify-content:space-between; align-items:flex-end;
+    border-bottom:1px solid #3a3a4a; padding-bottom:10px; margin-bottom:14px;
+  }
+  .header h1 { font-family:'IBM Plex Mono',monospace; font-size:10px; font-weight:600; letter-spacing:3px; text-transform:uppercase; color:#c8b89a; }
+  .header h2 { font-size:20px; font-weight:300; color:#f0e8d8; letter-spacing:0.5px; }
+  .header-sub { font-size:12px; color:#888; margin-top:2px; }
+  .header-right { text-align:right; font-family:'IBM Plex Mono',monospace; font-size:8px; color:#666; line-height:1.8; letter-spacing:1px; }
+
+  .plan-wrap { background:#f0ebe0; border:1px solid #3a3a4a; }
+  svg { display:block; width:100%; height:auto; }
+
+  .legend-grid {
+    display:grid; grid-template-columns:repeat(3,1fr); gap:6px;
+    background:#1e1e28; padding:12px 16px; border:1px solid #3a3a4a; margin-top:12px;
+  }
+  .li { display:flex; align-items:center; gap:7px; font-family:'IBM Plex Mono',monospace; font-size:8px; letter-spacing:0.4px; color:#aaa; }
+  .lc { width:13px; height:13px; flex-shrink:0; border:1px solid rgba(255,255,255,0.12); }
+  .footer { display:flex; justify-content:space-between; margin-top:8px; font-family:'IBM Plex Mono',monospace; font-size:7px; color:#444; letter-spacing:1px; }
+</style>
+</head>
+<body>
+<div class="wrapper">
+
+<div class="header">
+  <div>
+    <h1>Plano de Sitio · Master Plan v5.2</h1>
+    <h2>Parcela 71 — Isla de Maipo</h2>
+    <div class="header-sub">Hacienda Viñas del Maipo · Región Metropolitana, Chile</div>
+  </div>
+  <div class="header-right">
+    ESCALA 1:250 · NORTE = IZQUIERDA · v5.2<br>
+    49 m FRENTE × 128 m PROFUNDIDAD<br>
+    SUPERFICIE TOTAL: 6,272 m²<br>
+    5 ZONAS · 12 EST. + 3 PADRES · MARZO 2026
+  </div>
+</div>
+
+<div class="plan-wrap">
+<svg viewBox="0 0 760 1960" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <!-- Patterns -->
+  <pattern id="grass" patternUnits="userSpaceOnUse" width="10" height="10">
+    <rect width="10" height="10" fill="#d4e8a8"/>
+    <line x1="0" y1="5" x2="10" y2="5" stroke="#b8d080" stroke-width="0.4" opacity="0.5"/>
+    <line x1="5" y1="0" x2="5" y2="10" stroke="#b8d080" stroke-width="0.4" opacity="0.5"/>
+  </pattern>
+  <pattern id="gravel" patternUnits="userSpaceOnUse" width="7" height="7">
+    <rect width="7" height="7" fill="#cdc4ad"/>
+    <circle cx="1.5" cy="1.5" r="0.9" fill="#b0a48a" opacity="0.8"/>
+    <circle cx="5" cy="5" r="0.9" fill="#b0a48a" opacity="0.8"/>
+    <circle cx="1" cy="5.5" r="0.6" fill="#c0b49a" opacity="0.5"/>
+    <circle cx="5.5" cy="1.5" r="0.6" fill="#c0b49a" opacity="0.5"/>
+    <circle cx="3.5" cy="3" r="0.5" fill="#a89870" opacity="0.4"/>
+  </pattern>
+  <pattern id="orchard" patternUnits="userSpaceOnUse" width="12" height="12">
+    <rect width="12" height="12" fill="#bcd890"/>
+    <circle cx="6" cy="6" r="2" fill="#80b840" opacity="0.35"/>
+  </pattern>
+  <pattern id="hatch" patternUnits="userSpaceOnUse" width="7" height="7">
+    <rect width="7" height="7" fill="#e8dac0"/>
+    <line x1="0" y1="7" x2="7" y2="0" stroke="#c8a870" stroke-width="0.9"/>
+  </pattern>
+  <pattern id="sport" patternUnits="userSpaceOnUse" width="10" height="10">
+    <rect width="10" height="10" fill="#a8d870"/>
+    <line x1="0" y1="5" x2="10" y2="5" stroke="#80c040" stroke-width="0.5" opacity="0.4"/>
+  </pattern>
+
+  <!-- Filters -->
+  <filter id="sh"><feDropShadow dx="2" dy="3" stdDeviation="3" flood-color="#7a6a50" flood-opacity="0.35"/></filter>
+  <filter id="shl"><feDropShadow dx="1" dy="1.5" stdDeviation="1.5" flood-color="#7a6a50" flood-opacity="0.22"/></filter>
+
+  <!-- Tree symbols -->
+  <symbol id="TD" viewBox="0 0 26 28"><!-- deciduous -->
+    <circle cx="13" cy="11" r="9" fill="#7ab840" stroke="#5a9020" stroke-width="1"/>
+    <circle cx="9" cy="9" r="5.5" fill="#8ac850" opacity="0.55"/>
+    <circle cx="16" cy="8" r="4" fill="#6aa030" opacity="0.45"/>
+    <rect x="11.5" y="19" width="3" height="7" fill="#8B6914" rx="1"/>
+  </symbol>
+  <symbol id="TP" viewBox="0 0 24 30"><!-- perenne -->
+    <polygon points="12,2 22,22 2,22" fill="#3a7a30" stroke="#2a6020" stroke-width="0.8"/>
+    <polygon points="12,6 20,24 4,24" fill="#4a8a40" opacity="0.6"/>
+    <rect x="10.5" y="22" width="3" height="7" fill="#6B4F12" rx="1"/>
+  </symbol>
+  <symbol id="TF" viewBox="0 0 24 26"><!-- frutal -->
+    <circle cx="12" cy="10" r="8" fill="#d4a030" stroke="#a87820" stroke-width="1"/>
+    <circle cx="8" cy="8" r="5" fill="#e8c050" opacity="0.5"/>
+    <circle cx="8" cy="13" r="3" fill="#b88020" opacity="0.6"/>
+    <circle cx="15" cy="11" r="2.5" fill="#b88020" opacity="0.5"/>
+    <rect x="10.5" y="17" width="3" height="7" fill="#8B6914" rx="1"/>
+  </symbol>
+  <symbol id="TO" viewBox="0 0 24 26"><!-- ornamental grande -->
+    <circle cx="12" cy="11" r="9" fill="#60a050" stroke="#408030" stroke-width="1"/>
+    <circle cx="8" cy="8" r="5" fill="#70b060" opacity="0.5"/>
+    <rect x="10.5" y="19" width="3" height="6" fill="#8B6914" rx="1"/>
+  </symbol>
+
+  <!-- Markers -->
+  <marker id="arr" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+    <polygon points="0,6 3,0 6,6 3,4" fill="#888"/>
+  </marker>
+  <marker id="arrR" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto-start-reverse">
+    <polygon points="0,6 3,0 6,6 3,4" fill="#888"/>
+  </marker>
+  <marker id="arrN" markerWidth="7" markerHeight="7" refX="3.5" refY="3.5" orient="auto">
+    <polygon points="0,7 3.5,0 7,7 3.5,5" fill="#c85a10"/>
+  </marker>
+</defs>
+
+<!-- ═══════════════════════════════════════════════
+     FONDO GENERAL
+═══════════════════════════════════════════════ -->
+<rect width="760" height="1960" fill="#ede8dc"/>
+
+<!-- Grid de referencia -->
+<g opacity="0.1" stroke="#6a5a40" stroke-width="0.5">
+  <line x1="80" y1="40" x2="80" y2="1900"/>
+  <line x1="180" y1="40" x2="180" y2="1900"/>
+  <line x1="280" y1="40" x2="280" y2="1900"/>
+  <line x1="380" y1="40" x2="380" y2="1900"/>
+  <line x1="480" y1="40" x2="480" y2="1900"/>
+  <line x1="580" y1="40" x2="580" y2="1900"/>
+  <line x1="680" y1="40" x2="680" y2="1900"/>
+  <line x1="80" y1="140" x2="700" y2="140"/>
+  <line x1="80" y1="440" x2="700" y2="440"/>
+  <line x1="80" y1="740" x2="700" y2="740"/>
+  <line x1="80" y1="1040" x2="700" y2="1040"/>
+  <line x1="80" y1="1340" x2="700" y2="1340"/>
+  <line x1="80" y1="1640" x2="700" y2="1640"/>
+  <line x1="80" y1="1900" x2="700" y2="1900"/>
+</g>
+
+<!-- ═══════════════════════════════════════════════
+     TERRENO (49m × 128m)
+     SVG: x=80..700 (620px = 49m → 1m=12.65px)
+          y=60..1964 (1904px = 128m → 1m=14.875px)
+     Escala: 1m ≈ 12.65px ancho, ≈ 14.875px alto
+═══════════════════════════════════════════════ -->
+
+<!-- TERRENO base -->
+<rect x="80" y="60" width="620" height="1904" fill="url(#grass)" stroke="#1a2a0a" stroke-width="3"/>
+
+<!-- ─────────────────────────────────────────────
+     CAMINO LATERAL DERECHO (3.5m) = 44px ancho
+     x=612..656  (lado Sur/derecho del terreno)
+     Barrera perenne: x=656..700
+───────────────────────────────────────────── -->
+<rect x="612" y="60" width="51" height="1904" fill="url(#gravel)" stroke="#8a7a60" stroke-width="0.8"/>
+<line x1="612" y1="60" x2="612" y2="1964" stroke="#a08060" stroke-width="1" stroke-dasharray="8,5"/>
+<text x="637" y="1010" font-family="IBM Plex Mono" font-size="11" fill="#6a5a40" text-anchor="middle" writing-mode="vertical-rl" transform="rotate(180,634,1010)" letter-spacing="2">CAMINO LATERAL DERECHO · 4 m</text>
+
+<!-- BARRERA FORESTAL SUR — Quillayes/Peumos, deslinde derecho (x=663..700) -->
+<!-- Camino ahora tiene 4m=51px → termina en x=663. Árboles van desde x=663 -->
+<rect x="663" y="60" width="37" height="1904" fill="#2a6020" opacity="0.18"/>
+<g opacity="0.88">
+  <use href="#TP" x="660" y="62"  width="20" height="26"/>
+  <use href="#TP" x="660" y="116" width="20" height="26"/>
+  <use href="#TP" x="660" y="170" width="20" height="26"/>
+  <use href="#TP" x="660" y="224" width="20" height="26"/>
+  <use href="#TP" x="660" y="278" width="20" height="26"/>
+  <use href="#TP" x="660" y="332" width="20" height="26"/>
+  <use href="#TP" x="660" y="386" width="20" height="26"/>
+  <use href="#TP" x="660" y="440" width="20" height="26"/>
+  <use href="#TP" x="660" y="494" width="20" height="26"/>
+  <use href="#TP" x="660" y="548" width="20" height="26"/>
+  <use href="#TP" x="660" y="602" width="20" height="26"/>
+  <use href="#TP" x="660" y="656" width="20" height="26"/>
+  <use href="#TP" x="660" y="710" width="20" height="26"/>
+  <use href="#TP" x="660" y="764" width="20" height="26"/>
+  <use href="#TP" x="660" y="818" width="20" height="26"/>
+  <use href="#TP" x="660" y="872" width="20" height="26"/>
+  <use href="#TP" x="660" y="926" width="20" height="26"/>
+  <use href="#TP" x="660" y="980" width="20" height="26"/>
+  <use href="#TP" x="660" y="1034" width="20" height="26"/>
+  <use href="#TP" x="660" y="1088" width="20" height="26"/>
+  <use href="#TP" x="660" y="1142" width="20" height="26"/>
+  <use href="#TP" x="660" y="1196" width="20" height="26"/>
+  <use href="#TP" x="660" y="1250" width="20" height="26"/>
+  <use href="#TP" x="660" y="1304" width="20" height="26"/>
+  <use href="#TP" x="660" y="1358" width="20" height="26"/>
+  <use href="#TP" x="660" y="1412" width="20" height="26"/>
+  <use href="#TP" x="660" y="1466" width="20" height="26"/>
+  <use href="#TP" x="660" y="1520" width="20" height="26"/>
+  <use href="#TP" x="660" y="1574" width="20" height="26"/>
+  <use href="#TP" x="660" y="1628" width="20" height="26"/>
+  <use href="#TP" x="660" y="1682" width="20" height="26"/>
+  <use href="#TP" x="660" y="1736" width="20" height="26"/>
+  <use href="#TP" x="660" y="1790" width="20" height="26"/>
+  <use href="#TP" x="660" y="1844" width="20" height="26"/>
+  <use href="#TP" x="660" y="1898" width="20" height="26"/>
+</g>
+<text x="688" y="1010" font-family="IBM Plex Mono" font-size="8.5" fill="#1a5a10" text-anchor="middle" writing-mode="vertical-rl" transform="rotate(180,688,1010)" letter-spacing="1.5">BARRERA FORESTAL · QUILLAYES / PEUMOS · PROTECCIÓN VIENTO Y POLVO</text>
+<line x1="700" y1="60" x2="700" y2="1964" stroke="#0a1a0a" stroke-width="2.5"/>
+
+
+
+<!-- ═══════════════════════════════════════════════
+     ZONA 1 — ACCESO (0–18m desde frente)
+     y: 1964–60=1904px total. 18m = 268px → y=1696..1964
+═══════════════════════════════════════════════ -->
+<rect x="124" y="1696" width="541" height="268" fill="#ffe8b0" opacity="0.45"/>
+<!-- Zona label -->
+<rect x="128" y="1700" width="178" height="16" rx="3" fill="#d4a020" opacity="0.9"/>
+<text x="217" y="1712" font-family="IBM Plex Mono" font-size="9" fill="white" text-anchor="middle" font-weight="600">ZONA 1 — ACCESO · 1,225 m²</text>
+
+<!-- PORTÓN: pegado al camino lateral derecho (x=612), portón x=536..612 (6m=76px) -->
+<!-- Frente completo label -->
+<rect x="80" y="1950" width="456" height="14" fill="#d4a020" opacity="0.8"/>
+<rect x="612" y="1950" width="88" height="14" fill="#d4a020" opacity="0.8"/>
+<text x="300" y="1962" font-family="IBM Plex Mono" font-size="9" fill="white" text-anchor="middle" font-weight="700" letter-spacing="1">FRENTE 49m — CAMINO OLEA</text>
+<!-- Portón hojas: abre hacia adentro (hacia el Norte/izq) -->
+<line x1="536" y1="1946" x2="536" y2="1968" stroke="#f59320" stroke-width="5"/>
+<line x1="612" y1="1946" x2="612" y2="1968" stroke="#f59320" stroke-width="5"/>
+<line x1="536" y1="1953" x2="480" y2="1938" stroke="#f59320" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="612" y1="1953" x2="660" y2="1938" stroke="#f59320" stroke-width="3.5" stroke-linecap="round"/>
+<!-- Cota altura 1.8m -->
+<line x1="530" y1="1938" x2="530" y2="1966" stroke="#e07010" stroke-width="0.9" stroke-dasharray="2,2"/>
+<text x="520" y="1934" font-family="IBM Plex Mono" font-size="6.5" fill="#c07010" text-anchor="middle">1.8m ↕</text>
+<!-- Cota ancho 6m -->
+<line x1="536" y1="1972" x2="612" y2="1972" stroke="#e07010" stroke-width="1" marker-start="url(#arrR)" marker-end="url(#arr)"/>
+<text x="574" y="1981" font-family="IBM Plex Mono" font-size="6.5" fill="#c07010" text-anchor="middle">6m</text>
+<!-- Label portón -->
+<rect x="544" y="1942" width="60" height="12" rx="2" fill="#f59320"/>
+<text x="574" y="1951.5" font-family="IBM Plex Mono" font-size="7.5" fill="white" text-anchor="middle" font-weight="600">PORTÓN 6×1.8m</text>
+
+<!-- Camino de ingreso desde portón (conecta portón con camino lateral derecho) -->
+<rect x="536" y="1696" width="76" height="254" fill="url(#gravel)" opacity="0.7"/>
+<!-- Flecha circulación -->
+<line x1="574" y1="1930" x2="574" y2="1716" stroke="#a08040" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#arr)" opacity="0.5"/>
+<text x="558" y="1830" font-family="IBM Plex Mono" font-size="7" fill="#8a6a30" writing-mode="vertical-rl" transform="rotate(180,558,1830)">ingreso →</text>
+
+<!-- ══════════════════════════════════════════════
+     ESTACIONAMIENTO 12 VEHÍCULOS — 2 filas de 6
+     Distribución vertical (y):
+       1742–1762 → franja pasto arriba (20px)
+       1762–1832 → fila 1 · 6 espacios (70px)
+       1832–1854 → caminito central losetas (22px)
+       1854–1924 → fila 2 · 6 espacios (70px)
+       1924–1944 → franja pasto abajo (20px)
+     Ancho: x=86..530 · 6 espacios = 74px c/u ≈ 5.9m
+══════════════════════════════════════════════ -->
+
+<!-- Pérgola marco general -->
+<rect x="86" y="1742" width="444" height="202" fill="none" stroke="#8B6914" stroke-width="2.5"/>
+
+<!-- FRANJA PASTO ARRIBA -->
+<rect x="86" y="1742" width="444" height="20" fill="#7ab840" opacity="0.55"/>
+<text x="308" y="1756" font-family="IBM Plex Mono" font-size="7" fill="#2a5a10" text-anchor="middle" letter-spacing="2">· · · PASTO · · ·</text>
+
+<!-- FILA 1 gravilla (6 espacios) -->
+<rect x="86" y="1762" width="444" height="70" fill="#d8d0b8" opacity="0.6"/>
+<!-- Vigas pérgola horizontales fila 1 -->
+<line x1="86" y1="1762" x2="530" y2="1762" stroke="#8B6914" stroke-width="1.2" opacity="0.5"/>
+<line x1="86" y1="1832" x2="530" y2="1832" stroke="#8B6914" stroke-width="1.2" opacity="0.5"/>
+<!-- Vigas pérgola verticales -->
+<line x1="160" y1="1742" x2="160" y2="1944" stroke="#8B6914" stroke-width="1" opacity="0.35"/>
+<line x1="234" y1="1742" x2="234" y2="1944" stroke="#8B6914" stroke-width="1" opacity="0.35"/>
+<line x1="308" y1="1742" x2="308" y2="1944" stroke="#8B6914" stroke-width="1" opacity="0.35"/>
+<line x1="382" y1="1742" x2="382" y2="1944" stroke="#8B6914" stroke-width="1" opacity="0.35"/>
+<line x1="456" y1="1742" x2="456" y2="1944" stroke="#8B6914" stroke-width="1" opacity="0.35"/>
+<!-- Espacios fila 1 -->
+<g stroke="#6a5a40" stroke-width="1.2" fill="none" opacity="0.75">
+  <rect x="87"  y="1763" width="72" height="68" rx="1"/>
+  <rect x="161" y="1763" width="72" height="68" rx="1"/>
+  <rect x="235" y="1763" width="72" height="68" rx="1"/>
+  <rect x="309" y="1763" width="72" height="68" rx="1"/>
+  <rect x="383" y="1763" width="72" height="68" rx="1"/>
+  <rect x="457" y="1763" width="72" height="68" rx="1"/>
+</g>
+<!-- Números fila 1 -->
+<g font-family="IBM Plex Mono" font-size="10" fill="#4a3a20" text-anchor="middle" font-weight="600">
+  <text x="123" y="1801">1</text>
+  <text x="197" y="1801">2</text>
+  <text x="271" y="1801">3</text>
+  <text x="345" y="1801">4</text>
+  <text x="419" y="1801">5</text>
+  <text x="493" y="1801">6</text>
+</g>
+
+<!-- CAMINITO CENTRAL DE LOSETAS -->
+<rect x="86" y="1832" width="444" height="22" fill="#e8e0c8"/>
+<!-- Losetas simuladas -->
+<g fill="#d0c4a8" stroke="#b8aa90" stroke-width="0.6">
+  <rect x="90"  y="1834" width="36" height="18" rx="1"/>
+  <rect x="130" y="1834" width="36" height="18" rx="1"/>
+  <rect x="170" y="1834" width="36" height="18" rx="1"/>
+  <rect x="210" y="1834" width="36" height="18" rx="1"/>
+  <rect x="250" y="1834" width="36" height="18" rx="1"/>
+  <rect x="290" y="1834" width="36" height="18" rx="1"/>
+  <rect x="330" y="1834" width="36" height="18" rx="1"/>
+  <rect x="370" y="1834" width="36" height="18" rx="1"/>
+  <rect x="410" y="1834" width="36" height="18" rx="1"/>
+  <rect x="450" y="1834" width="36" height="18" rx="1"/>
+  <rect x="490" y="1834" width="36" height="18" rx="1"/>
+</g>
+<text x="308" y="1847" font-family="IBM Plex Mono" font-size="7" fill="#8a7a60" text-anchor="middle" letter-spacing="1.5">CAMINITO PEATONAL · LOSETAS</text>
+
+<!-- FILA 2 gravilla (6 espacios) -->
+<rect x="86" y="1854" width="444" height="70" fill="#d8d0b8" opacity="0.6"/>
+<line x1="86" y1="1854" x2="530" y2="1854" stroke="#8B6914" stroke-width="1.2" opacity="0.5"/>
+<line x1="86" y1="1924" x2="530" y2="1924" stroke="#8B6914" stroke-width="1.2" opacity="0.5"/>
+<!-- Espacios fila 2 -->
+<g stroke="#6a5a40" stroke-width="1.2" fill="none" opacity="0.75">
+  <rect x="87"  y="1855" width="72" height="68" rx="1"/>
+  <rect x="161" y="1855" width="72" height="68" rx="1"/>
+  <rect x="235" y="1855" width="72" height="68" rx="1"/>
+  <rect x="309" y="1855" width="72" height="68" rx="1"/>
+  <rect x="383" y="1855" width="72" height="68" rx="1"/>
+  <rect x="457" y="1855" width="72" height="68" rx="1"/>
+</g>
+<!-- Números fila 2 -->
+<g font-family="IBM Plex Mono" font-size="10" fill="#4a3a20" text-anchor="middle" font-weight="600">
+  <text x="123" y="1893">7</text>
+  <text x="197" y="1893">8</text>
+  <text x="271" y="1893">9</text>
+  <text x="345" y="1893">10</text>
+  <text x="419" y="1893">11</text>
+  <text x="493" y="1893">12</text>
+</g>
+
+<!-- FRANJA PASTO ABAJO -->
+<rect x="86" y="1924" width="444" height="20" fill="#7ab840" opacity="0.55"/>
+<text x="308" y="1938" font-family="IBM Plex Mono" font-size="7" fill="#2a5a10" text-anchor="middle" letter-spacing="2">· · · PASTO · · ·</text>
+
+<!-- Label estacionamiento -->
+<rect x="196" y="1908" width="184" height="13" rx="2" fill="#f0ebe0" opacity="0.0"/>
+<rect x="218" y="1946" width="182" height="22" rx="2" fill="#f0ebe0" opacity="0.92"/>
+<text x="309" y="1957" font-family="IBM Plex Mono" font-size="8" fill="#4a3a20" text-anchor="middle" font-weight="600">ESTAC. 12 VEH. · GRAVA ESTABILIZADA + PASTO</text>
+
+<!-- Jardín ornamental izquierdo + naranjos -->
+<circle cx="200" cy="1720" r="22" fill="#c8e8a0" opacity="0.5" stroke="#80c040" stroke-width="0.8" stroke-dasharray="3,2"/>
+<use href="#TD" x="187" y="1706" width="26" height="28"/>
+<text x="200" y="1735" font-family="IBM Plex Mono" font-size="7" fill="#4a6a20" text-anchor="middle">Naranjo</text>
+
+<!-- Jardín ornamental centro -->
+<circle cx="490" cy="1720" r="22" fill="#c8e8a0" opacity="0.5" stroke="#80c040" stroke-width="0.8" stroke-dasharray="3,2"/>
+<use href="#TO" x="477" y="1706" width="26" height="26"/>
+<text x="490" y="1735" font-family="IBM Plex Mono" font-size="7" fill="#4a6a20" text-anchor="middle">Ornamental</text>
+
+<!-- JARDÍN DERECHO ENTRADA: pasto + naranjo frutal -->
+<!-- Ubicado entre camino ingreso (x=536..612) y camino lateral (x=612), y=1696..1830 -->
+<!-- Pequeña franja de pasto con naranjo que enmarca la entrada -->
+<rect x="536" y="1696" width="74" height="44" fill="#7ab840" opacity="0.45" rx="2"/>
+<!-- Naranjo derecho entrada -->
+<circle cx="573" cy="1718" r="20" fill="#c8e8a0" opacity="0.6" stroke="#80c040" stroke-width="0.8" stroke-dasharray="3,2"/>
+<use href="#TF" x="560" y="1704" width="26" height="26"/>
+<text x="573" y="1737" font-family="IBM Plex Mono" font-size="7" fill="#6a8a10" text-anchor="middle">Naranjo</text>
+<!-- Pequeño sendero de losetas desde portón al naranjo -->
+<rect x="557" y="1740" width="32" height="8" rx="2" fill="#e0d8c0" stroke="#b8a888" stroke-width="0.6"/>
+<text x="573" y="1755" font-family="IBM Plex Mono" font-size="6" fill="#8a7060" text-anchor="middle">pasto + frutal</text>
+
+<!-- Solo Empalme eléctrico en portón (el H2O se va al lado de la casa) -->
+<circle cx="646" cy="1910" r="10" fill="#f59320" stroke="#c07010" stroke-width="1.5"/>
+<text x="646" y="1914" font-family="IBM Plex Mono" font-size="6" fill="white" text-anchor="middle" font-weight="700">⚡</text>
+<text x="646" y="1928" font-family="IBM Plex Mono" font-size="6.5" fill="#4a3a20" text-anchor="middle">Empalme Elect.</text>
+
+<!-- Cámara 1 (portón) - lado derecho junto al portón -->
+<rect x="516" y="1918" width="28" height="16" rx="2" fill="#1a1a2e" stroke="#4a9eff" stroke-width="1.5"/>
+<circle cx="527" cy="1926" r="4" fill="none" stroke="#4a9eff" stroke-width="1.2"/>
+<circle cx="527" cy="1926" r="1.5" fill="#4a9eff" opacity="0.7"/>
+<path d="M516,1920 L480,1904 L480,1920 Z" fill="#4a9eff" opacity="0.12" stroke="#4a9eff" stroke-width="0.5" stroke-dasharray="2,2"/>
+<rect x="490" y="1905" width="68" height="10" rx="2" fill="#1a1a2e" opacity="0.88"/>
+<text x="524" y="1913" font-family="IBM Plex Mono" font-size="7" fill="#4a9eff" text-anchor="middle">📷 CAM-1 · PORTÓN</text>
+
+<!-- Foco 1 (portón) - derecha -->
+<circle cx="610" cy="1926" r="9" fill="#ffdd44" opacity="0.9" stroke="#cc9900" stroke-width="1.5"/>
+<circle cx="610" cy="1926" r="16" fill="#ffdd44" opacity="0.07" stroke="#ffdd44" stroke-width="0.5" stroke-dasharray="3,3"/>
+<text x="610" y="1945" font-family="IBM Plex Mono" font-size="7" fill="#aa7700" text-anchor="middle">💡 FOCO-1</text>
+
+<!-- Divisoria zona 1/2 -->
+<line x1="80" y1="1696" x2="700" y2="1696" stroke="#8a6a30" stroke-width="1.5" stroke-dasharray="6,3"/>
+
+<!-- ═══════════════════════════════════════════════
+     ZONA 2 — VIVIENDA Y RECREACIÓN (18–36m)
+     18m = 268px → y=1428..1696
+═══════════════════════════════════════════════ -->
+<rect x="124" y="1428" width="541" height="268" fill="#d8ecc8" opacity="0.3"/>
+<rect x="128" y="1432" width="220" height="16" rx="3" fill="#4a8a30" opacity="0.9"/>
+<text x="238" y="1444" font-family="IBM Plex Mono" font-size="9" fill="white" text-anchor="middle" font-weight="600">ZONA 2 — VIVIENDA Y RECREACIÓN · 1,305 m²</text>
+
+<!-- Retiro 10m desde Norte (izq): x=80+126=206 -->
+<line x1="206" y1="1428" x2="206" y2="1696" stroke="#c85a10" stroke-width="0.8" stroke-dasharray="5,3" opacity="0.7"/>
+<text x="165" y="1460" font-family="IBM Plex Mono" font-size="7" fill="#c85a10" text-anchor="middle" transform="rotate(-90,165,1460)">RETIRO 10m Norte</text>
+
+<!-- CASA PRINCIPAL 200m² (15m×13.3m = 190px×198px) -->
+<!-- Centrada horizontalmente con orientación norte -->
+<!-- x centro ~ 370, y centro ~ 1560 -->
+<rect x="240" y="1460" width="190" height="198" fill="#f8f4e8" stroke="#1a1a1a" stroke-width="2.5" filter="url(#sh)" rx="2"/>
+<!-- División interna -->
+<line x1="240" y1="1559" x2="430" y2="1559" stroke="#3a3a3a" stroke-width="1"/>
+<line x1="335" y1="1460" x2="335" y2="1658" stroke="#3a3a3a" stroke-width="1"/>
+<line x1="335" y1="1559" x2="430" y2="1559" stroke="#3a3a3a" stroke-width="1"/>
+<!-- Habitaciones -->
+<text x="288" y="1502" font-family="IBM Plex Mono" font-size="8" fill="#1a1a1a" text-anchor="middle" font-weight="600">DORM.</text>
+<text x="288" y="1513" font-family="IBM Plex Mono" font-size="8" fill="#1a1a1a" text-anchor="middle" font-weight="600">PRINC.</text>
+<text x="383" y="1496" font-family="IBM Plex Mono" font-size="7.5" fill="#1a1a1a" text-anchor="middle">DORM 2</text>
+<text x="383" y="1540" font-family="IBM Plex Mono" font-size="7.5" fill="#1a1a1a" text-anchor="middle">DORM 3</text>
+<text x="288" y="1602" font-family="IBM Plex Mono" font-size="8" fill="#1a1a1a" text-anchor="middle">LIVING/</text>
+<text x="288" y="1614" font-family="IBM Plex Mono" font-size="8" fill="#1a1a1a" text-anchor="middle">COMEDOR</text>
+<text x="383" y="1602" font-family="IBM Plex Mono" font-size="7.5" fill="#1a1a1a" text-anchor="middle">COCINA/</text>
+<text x="383" y="1612" font-family="IBM Plex Mono" font-size="7.5" fill="#1a1a1a" text-anchor="middle">BAÑOS</text>
+<!-- Ventanas norte (fachada norte = izquierda de la casa, x=240) -->
+<rect x="237" y="1485" width="6" height="18" fill="#a8d0f0" stroke="#4a8aaa" stroke-width="1"/>
+<rect x="237" y="1515" width="6" height="18" fill="#a8d0f0" stroke="#4a8aaa" stroke-width="1"/>
+<rect x="237" y="1580" width="6" height="18" fill="#a8d0f0" stroke="#4a8aaa" stroke-width="1"/>
+<!-- Label casa -->
+<rect x="258" y="1658" width="194" height="26" rx="2" fill="#1a1a1a" opacity="0.82"/>
+<text x="355" y="1669" font-family="IBM Plex Mono" font-size="8.5" fill="white" text-anchor="middle" font-weight="600">CASA PRINCIPAL · 200 m²</text>
+<text x="355" y="1679" font-family="IBM Plex Mono" font-size="7.5" fill="#d0c8b0" text-anchor="middle">15m × 13.3m · ORIENT. NORTE ←</text>
+
+<!-- Fachada norte label -->
+<text x="202" y="1557" font-family="IBM Plex Mono" font-size="7" fill="#c85a10" text-anchor="middle" transform="rotate(-90,202,1557)">← FACHADA NORTE (solar)</text>
+
+<!-- CONTAINER (6x2.4m = 76x36px) - junto a la piscina, baño/ducha post-piscina -->
+<rect x="445" y="1454" width="76" height="36" fill="#c8d4e8" stroke="#3a3a50" stroke-width="2" rx="1" filter="url(#shl)"/>
+<line x1="445" y1="1472" x2="521" y2="1472" stroke="#3a3a50" stroke-width="0.6"/>
+<text x="483" y="1463" font-family="IBM Plex Mono" font-size="7" fill="#2a2a3a" text-anchor="middle" font-weight="600">CONTAINER</text>
+<text x="483" y="1474" font-family="IBM Plex Mono" font-size="6.5" fill="#4a4a5a" text-anchor="middle">6m × 2.4m</text>
+<text x="483" y="1483" font-family="IBM Plex Mono" font-size="6" fill="#6a6a7a" text-anchor="middle">BAÑO · DUCHA PISCINA</text>
+
+<!-- PISCINA (8x4m = 101px×60px) -->
+<rect x="445" y="1490" width="101" height="60" rx="12" fill="#4a9abf" stroke="#2a6a8f" stroke-width="2" filter="url(#sh)"/>
+<rect x="448" y="1493" width="95" height="54" rx="10" fill="#7abcd8" opacity="0.5"/>
+<path d="M455,1515 Q475,1509 495,1515 Q515,1521 535,1515" stroke="white" stroke-width="1.2" fill="none" opacity="0.7"/>
+<path d="M455,1527 Q475,1521 495,1527 Q515,1533 535,1527" stroke="white" stroke-width="1" fill="none" opacity="0.5"/>
+<text x="496" y="1524" font-family="IBM Plex Mono" font-size="9" fill="white" text-anchor="middle" font-weight="600">PISCINA</text>
+<text x="496" y="1536" font-family="IBM Plex Mono" font-size="7.5" fill="white" text-anchor="middle">8m × 4m</text>
+<!-- Deck -->
+<rect x="437" y="1480" width="117" height="82" rx="6" fill="none" stroke="#8B6914" stroke-width="1.5" stroke-dasharray="3,2"/>
+<text x="496" y="1476" font-family="IBM Plex Mono" font-size="7" fill="#8B6914" text-anchor="middle">DECK MADERA</text>
+
+<!-- QUINCHO (5x3.5m = 63x52px) -->
+<!-- QUINCHO solo, sin vest -->
+<rect x="445" y="1570" width="100" height="52" fill="#f0e8d0" stroke="#6B4F12" stroke-width="2" rx="2" filter="url(#shl)"/>
+<line x1="445" y1="1596" x2="545" y2="1596" stroke="#6B4F12" stroke-width="0.8"/>
+<text x="495" y="1588" font-family="IBM Plex Mono" font-size="8.5" fill="#3a1a00" text-anchor="middle" font-weight="600">QUINCHO</text>
+<text x="495" y="1600" font-family="IBM Plex Mono" font-size="7.5" fill="#6a4a20" text-anchor="middle">BBQ · 5×3.5m</text>
+<text x="495" y="1613" font-family="IBM Plex Mono" font-size="7" fill="#8a6a40" text-anchor="middle">~18 m²</text>
+
+<!-- H2O + RADIER 4×4m — lado Norte (izquierda) de la casa -->
+<!-- Aquí llega el agua potable. Radier de hormigón 4×4m como base -->
+<!-- x=130..180 (lado Norte), y=1530..1590 (a la izquierda de la casa) -->
+<rect x="130" y="1530" width="50" height="60" fill="#e8e0cc" stroke="#2a2a2a" stroke-width="1.5" stroke-dasharray="4,2" rx="1"/>
+<!-- Textura cemento -->
+<line x1="130" y1="1550" x2="180" y2="1550" stroke="#b8b0a0" stroke-width="0.5"/>
+<line x1="130" y1="1570" x2="180" y2="1570" stroke="#b8b0a0" stroke-width="0.5"/>
+<line x1="155" y1="1530" x2="155" y2="1590" stroke="#b8b0a0" stroke-width="0.5"/>
+<!-- Símbolo H2O encima -->
+<circle cx="155" cy="1558" r="14" fill="#4a9abf" stroke="#2a6a8f" stroke-width="1.8"/>
+<text x="155" y="1554" font-family="IBM Plex Mono" font-size="7" fill="white" text-anchor="middle" font-weight="700">H₂O</text>
+<text x="155" y="1564" font-family="IBM Plex Mono" font-size="6" fill="white" text-anchor="middle">AGUA</text>
+<!-- Labels -->
+<rect x="88" y="1594" width="134" height="18" rx="2" fill="#1a1a2a" opacity="0.85"/>
+<text x="155" y="1603" font-family="IBM Plex Mono" font-size="7.5" fill="#a0d8f0" text-anchor="middle" font-weight="600">RADIER 4×4m · AGUA POTABLE</text>
+<text x="155" y="1612" font-family="IBM Plex Mono" font-size="6.5" fill="#7abcd8" text-anchor="middle">lado Norte casa · llegada agua</text>
+
+<!-- Palto -->
+<use href="#TF" x="194" y="1592" width="22" height="26"/>
+<text x="205" y="1632" font-family="IBM Plex Mono" font-size="7" fill="#6a4a10" text-anchor="middle">Palto</text>
+
+<!-- Limonero zona vivienda izquierda (norte) -->
+<use href="#TF" x="136" y="1434" width="22" height="26"/>
+<text x="147" y="1472" font-family="IBM Plex Mono" font-size="7" fill="#6a8a10" text-anchor="middle">Limonero</text>
+
+<!-- Árboles deciduos norte de la casa -->
+<use href="#TD" x="208" y="1466" width="24" height="26"/>
+<use href="#TD" x="208" y="1514" width="24" height="26"/>
+<use href="#TD" x="208" y="1562" width="24" height="26"/>
+<text x="219" y="1622" font-family="IBM Plex Mono" font-size="6.5" fill="#3a5a28" text-anchor="middle">Decid.</text>
+
+<!-- Focos zona vivienda -->
+<circle cx="136" cy="1468" r="8" fill="#ffdd44" opacity="0.9" stroke="#cc9900" stroke-width="1.5"/>
+<circle cx="136" cy="1468" r="20" fill="#ffdd44" opacity="0.06" stroke="#ffdd44" stroke-width="0.5" stroke-dasharray="3,3"/>
+<text x="136" y="1490" font-family="IBM Plex Mono" font-size="6.5" fill="#aa7700" text-anchor="middle">💡 FOCO-2</text>
+
+<!-- Cámara 2 (esquina norte casa) -->
+<rect x="232" y="1453" width="28" height="16" rx="2" fill="#1a1a2e" stroke="#4a9eff" stroke-width="1.5"/>
+<circle cx="243" cy="1461" r="4" fill="none" stroke="#4a9eff" stroke-width="1.2"/>
+<circle cx="243" cy="1461" r="1.5" fill="#4a9eff" opacity="0.7"/>
+<path d="M260,1461 L290,1440 L320,1440 L290,1461 Z" fill="#4a9eff" opacity="0.1" stroke="#4a9eff" stroke-width="0.4" stroke-dasharray="2,2"/>
+<rect x="210" y="1440" width="68" height="10" rx="2" fill="#1a1a2e" opacity="0.88"/>
+<text x="244" y="1448" font-family="IBM Plex Mono" font-size="7" fill="#4a9eff" text-anchor="middle">📷 CAM-2 · CASA</text>
+
+<!-- Divisoria zona 2/3 -->
+<line x1="80" y1="1428" x2="700" y2="1428" stroke="#8a6a30" stroke-width="1.5" stroke-dasharray="6,3"/>
+
+<!-- ═══════════════════════════════════════════════
+     ZONA 3 — DEPORTIVA (36–54m)
+     18m = 268px → y=1160..1428
+═══════════════════════════════════════════════ -->
+<rect x="124" y="1160" width="541" height="268" fill="#c0e898" opacity="0.3"/>
+<rect x="128" y="1164" width="198" height="16" rx="3" fill="#2a7a2a" opacity="0.9"/>
+<text x="227" y="1176" font-family="IBM Plex Mono" font-size="9" fill="white" text-anchor="middle" font-weight="600">ZONA 3 — DEPORTIVA · 975 m²</text>
+
+<!-- Cancha multiuso (25x15m = 316px×223px) centrada -->
+<rect x="172" y="1183" width="316" height="223" fill="url(#sport)" stroke="#2a8a20" stroke-width="2" filter="url(#shl)" rx="3"/>
+<!-- Líneas cancha -->
+<rect x="172" y="1183" width="316" height="223" fill="none" stroke="white" stroke-width="1.5" rx="3"/>
+<line x1="330" y1="1183" x2="330" y2="1406" stroke="white" stroke-width="1"/>
+<circle cx="330" cy="1295" r="26" fill="none" stroke="white" stroke-width="1"/>
+<circle cx="330" cy="1295" r="3" fill="white"/>
+<!-- Arcos -->
+<rect x="172" y="1265" width="25" height="60" fill="none" stroke="white" stroke-width="1" rx="2"/>
+<rect x="463" y="1265" width="25" height="60" fill="none" stroke="white" stroke-width="1" rx="2"/>
+<text x="330" y="1290" font-family="IBM Plex Mono" font-size="10" fill="white" text-anchor="middle" font-weight="600">CANCHA MULTIUSO</text>
+<text x="330" y="1303" font-family="IBM Plex Mono" font-size="8.5" fill="white" text-anchor="middle">25m × 15m · 375 m²</text>
+<text x="330" y="1315" font-family="IBM Plex Mono" font-size="8" fill="#d0f0a0" text-anchor="middle">Fútbol 7 / Básquet / Vóley</text>
+
+<!-- Divisoria zona 3/4 -->
+<line x1="80" y1="1160" x2="700" y2="1160" stroke="#8a6a30" stroke-width="1.5" stroke-dasharray="6,3"/>
+
+<!-- ═══════════════════════════════════════════════
+     ZONA 4 — PRODUCCIÓN (54–82m)
+     28m = 416px → y=744..1160
+═══════════════════════════════════════════════ -->
+<rect x="124" y="744" width="541" height="416" fill="#d0e8a0" opacity="0.3"/>
+<rect x="128" y="748" width="208" height="16" rx="3" fill="#7a8a20" opacity="0.9"/>
+<text x="232" y="760" font-family="IBM Plex Mono" font-size="9" fill="white" text-anchor="middle" font-weight="600">ZONA 4 — PRODUCCIÓN · 1,327 m²</text>
+
+<!-- HUERTO (23m×26m = 291px×387px) -->
+<rect x="136" y="760" width="291" height="370" fill="#c8dca0" stroke="#5a8a20" stroke-width="1.5" stroke-dasharray="5,3" rx="3"/>
+<!-- Hileras huerto -->
+<g stroke="#90c060" stroke-width="0.7" opacity="0.5">
+  <line x1="136" y1="800" x2="427" y2="800"/>
+  <line x1="136" y1="840" x2="427" y2="840"/>
+  <line x1="136" y1="880" x2="427" y2="880"/>
+  <line x1="136" y1="920" x2="427" y2="920"/>
+  <line x1="136" y1="960" x2="427" y2="960"/>
+  <line x1="136" y1="1000" x2="427" y2="1000"/>
+  <line x1="136" y1="1040" x2="427" y2="1040"/>
+  <line x1="136" y1="1080" x2="427" y2="1080"/>
+</g>
+<text x="281" y="930" font-family="IBM Plex Mono" font-size="11" fill="#3a6a10" text-anchor="middle" font-weight="600">HUERTO</text>
+<text x="281" y="946" font-family="IBM Plex Mono" font-size="9.5" fill="#3a6a10" text-anchor="middle">23m × 26m · ~598 m²</text>
+<text x="281" y="962" font-family="IBM Plex Mono" font-size="9" fill="#5a8a30" text-anchor="middle">Verduras · Hierbas</text>
+<text x="281" y="975" font-family="IBM Plex Mono" font-size="9" fill="#5a8a30" text-anchor="middle">Producción familiar</text>
+
+<!-- GALLINERO (10x8m = 126px×119px) -->
+<rect x="452" y="888" width="126" height="119" fill="#e8d8a0" stroke="#8a6a20" stroke-width="2" rx="2" filter="url(#shl)"/>
+<!-- Corrida exterior -->
+<rect x="452" y="1008" width="126" height="64" fill="#d8c880" opacity="0.6" stroke="#8a6a20" stroke-width="1.2" stroke-dasharray="3,2" rx="2"/>
+<line x1="452" y1="888" x2="578" y2="888" stroke="#8a6a20" stroke-width="0.8"/>
+<text x="515" y="930" font-family="IBM Plex Mono" font-size="9" fill="#4a2a00" text-anchor="middle" font-weight="600">GALLINERO</text>
+<text x="515" y="943" font-family="IBM Plex Mono" font-size="8" fill="#6a4a10" text-anchor="middle">10m × 8m</text>
+<text x="515" y="956" font-family="IBM Plex Mono" font-size="7.5" fill="#6a4a10" text-anchor="middle">Máx. 30 gallinas</text>
+<!-- Techo gallinero indicado -->
+<line x1="452" y1="894" x2="578" y2="894" stroke="#6a4a10" stroke-width="0.8" opacity="0.5"/>
+<text x="452" y="884" font-family="IBM Plex Mono" font-size="6.5" fill="#8a6a20">Techo</text>
+<!-- Corrida label -->
+<text x="515" y="1046" font-family="IBM Plex Mono" font-size="8" fill="#6a4a10" text-anchor="middle">Corrida</text>
+<text x="515" y="1058" font-family="IBM Plex Mono" font-size="7" fill="#8a6a30" text-anchor="middle">ext.</text>
+
+<!-- POZO AGUA — movido al lado NORTE (izquierda) Zona 4/5 -->
+<!-- Alejado de la fosa (derecha) para evitar contaminación de napas -->
+<!-- Distancia a fosa: ~46m — cumple norma mínima 30m -->
+<circle cx="150" cy="820" r="24" fill="#4a9abf" stroke="#2a6a8f" stroke-width="2" filter="url(#shl)"/>
+<circle cx="150" cy="820" r="18" fill="#7abcd8" opacity="0.6"/>
+<text x="150" y="814" font-family="IBM Plex Mono" font-size="7.5" fill="white" text-anchor="middle" font-weight="700">POZO</text>
+<text x="150" y="825" font-family="IBM Plex Mono" font-size="7.5" fill="white" text-anchor="middle" font-weight="700">AGUA</text>
+<rect x="102" y="849" width="100" height="12" rx="2" fill="#2a5a7a" opacity="0.85"/>
+<text x="152" y="858" font-family="IBM Plex Mono" font-size="7" fill="#a0d8f0" text-anchor="middle">Compartido ambas casas</text>
+<!-- Línea de distancia segura pozo → fosa -->
+<line x1="174" y1="826" x2="552" y2="1380" stroke="#c85a10" stroke-width="0.8" stroke-dasharray="6,4" opacity="0.45"/>
+<rect x="300" y="1070" width="100" height="11" rx="2" fill="#3a1a0a" opacity="0.82"/>
+<text x="350" y="1079" font-family="IBM Plex Mono" font-size="7" fill="#f09060" text-anchor="middle">↔ ~46m (min. 30m ✓)</text>
+
+<!-- FOSA SÉPTICA — Zona 4, junto al camino de servicio -->
+<rect x="552" y="1380" width="58" height="48" fill="url(#hatch)" stroke="#8a6a20" stroke-width="1.8" stroke-dasharray="4,2" rx="2"/>
+<text x="581" y="1398" font-family="IBM Plex Mono" font-size="8" fill="#6a4a10" text-anchor="middle" font-weight="600">FOSA</text>
+<text x="581" y="1409" font-family="IBM Plex Mono" font-size="8" fill="#6a4a10" text-anchor="middle">SÉPTICA</text>
+<!-- Etiqueta ACCESO LIMPIAFOSAS -->
+<rect x="480" y="1430" width="140" height="12" rx="2" fill="#8a6a20" opacity="0.9"/>
+<text x="550" y="1439" font-family="IBM Plex Mono" font-size="7" fill="#fffde0" text-anchor="middle" font-weight="600">🚛 ACCESO LIMPIAFOSAS</text>
+<!-- Flecha hacia camino de servicio -->
+<line x1="610" y1="1404" x2="632" y2="1404" stroke="#8a6a20" stroke-width="1.2" marker-end="url(#arr)" stroke-dasharray="3,2"/>
+<!-- Línea distancia a la casa -->
+<line x1="581" y1="1428" x2="430" y2="1658" stroke="#c85a10" stroke-width="0.9" stroke-dasharray="5,3" opacity="0.6"/>
+<rect x="460" y="1540" width="68" height="10" rx="2" fill="#f2ede3" opacity="0.85"/>
+<text x="494" y="1548" font-family="IBM Plex Mono" font-size="6.5" fill="#c85a10" text-anchor="middle">≥ 5m de casa</text>
+<!-- Etiqueta explicativa fosa -->
+<rect x="430" y="1355" width="178" height="20" rx="2" fill="#1a1a1a" opacity="0.75"/>
+<text x="519" y="1369" font-family="IBM Plex Mono" font-size="7" fill="#d0c090" text-anchor="middle">⚠ Fosa: camino derecho · lejos del pozo (lado Norte)</text>
+
+<!-- Divisoria zona 4/5 -->
+<line x1="80" y1="744" x2="700" y2="744" stroke="#8a6a30" stroke-width="1.5" stroke-dasharray="6,3"/>
+
+<!-- ═══════════════════════════════════════════════
+     ZONA 5 — CASA PADRES (82–128m)
+     46m = 684px → y=60..744
+═══════════════════════════════════════════════ -->
+<rect x="124" y="60" width="541" height="684" fill="#e8d8f0" opacity="0.25"/>
+<rect x="128" y="64" width="212" height="16" rx="3" fill="#7a4a9a" opacity="0.9"/>
+<text x="234" y="76" font-family="IBM Plex Mono" font-size="9" fill="white" text-anchor="middle" font-weight="600">ZONA 5 — CASA PADRES · 1,200 m²</text>
+
+<!-- CASA PADRES (13x9.2m = 164px×137px) -->
+<rect x="200" y="148" width="164" height="137" fill="#e8dcf4" stroke="#6a3a8a" stroke-width="2.5" rx="2" filter="url(#sh)"/>
+<line x1="200" y1="217" x2="364" y2="217" stroke="#6a3a8a" stroke-width="1"/>
+<line x1="282" y1="148" x2="282" y2="285" stroke="#6a3a8a" stroke-width="1"/>
+<text x="241" y="176" font-family="IBM Plex Mono" font-size="8" fill="#3a1a5a" text-anchor="middle">DORM 1</text>
+<text x="323" y="176" font-family="IBM Plex Mono" font-size="8" fill="#3a1a5a" text-anchor="middle">DORM 2</text>
+<text x="241" y="250" font-family="IBM Plex Mono" font-size="8" fill="#3a1a5a" text-anchor="middle">LIVING/</text>
+<text x="241" y="261" font-family="IBM Plex Mono" font-size="8" fill="#3a1a5a" text-anchor="middle">COMEDOR</text>
+<text x="323" y="250" font-family="IBM Plex Mono" font-size="8" fill="#3a1a5a" text-anchor="middle">COCINA</text>
+<rect x="196" y="286" width="176" height="36" rx="2" fill="#6a3a8a" opacity="0.85"/>
+<text x="284" y="299" font-family="IBM Plex Mono" font-size="8.5" fill="white" text-anchor="middle" font-weight="600">CASA PADRES · 120 m²</text>
+<text x="284" y="311" font-family="IBM Plex Mono" font-size="7.5" fill="#d8c8f0" text-anchor="middle">13m × 9.2m · FUTURO 2027+</text>
+
+<!-- Estacionamiento padres P1-P3 -->
+<rect x="136" y="340" width="50" height="230" fill="#d8d0b8" opacity="0.5" stroke="#8a7a60" stroke-width="1" stroke-dasharray="3,2" rx="2"/>
+<rect x="137" y="341" width="48" height="74" fill="none" stroke="#6a5a40" stroke-width="1"/>
+<rect x="137" y="416" width="48" height="74" fill="none" stroke="#6a5a40" stroke-width="1"/>
+<rect x="137" y="491" width="48" height="74" fill="none" stroke="#6a5a40" stroke-width="1"/>
+<text x="161" y="382" font-family="IBM Plex Mono" font-size="8" fill="#4a3a20" text-anchor="middle" font-weight="600">P1</text>
+<text x="161" y="457" font-family="IBM Plex Mono" font-size="8" fill="#4a3a20" text-anchor="middle" font-weight="600">P2</text>
+<text x="161" y="532" font-family="IBM Plex Mono" font-size="8" fill="#4a3a20" text-anchor="middle" font-weight="600">P3</text>
+<text x="161" y="580" font-family="IBM Plex Mono" font-size="7" fill="#6a5a40" text-anchor="middle">ESTAC.</text>
+<text x="161" y="590" font-family="IBM Plex Mono" font-size="7" fill="#6a5a40" text-anchor="middle">PADRES</text>
+
+<!-- Pasto zona padres -->
+<rect x="390" y="148" width="248" height="250" fill="#b8d880" opacity="0.45" stroke="#70a830" stroke-width="0.8" stroke-dasharray="4,2" rx="3"/>
+<text x="514" y="270" font-family="IBM Plex Mono" font-size="11" fill="#3a6a10" text-anchor="middle" font-weight="300" font-style="italic">PASTO</text>
+<text x="514" y="285" font-family="IBM Plex Mono" font-size="8.5" fill="#5a8a30" text-anchor="middle">≈ 620 m²</text>
+
+<!-- Árboles CADUCOS norte casa padres — bioclimática: sombra verano, sol invierno -->
+<use href="#TD" x="375" y="78" width="26" height="28"/>
+<use href="#TD" x="436" y="78" width="26" height="28"/>
+<use href="#TD" x="497" y="78" width="26" height="28"/>
+<use href="#TD" x="558" y="78" width="26" height="28"/>
+<use href="#TD" x="619" y="78" width="26" height="28"/>
+<rect x="370" y="64" width="282" height="10" rx="2" fill="#3a6a10" opacity="0.75"/>
+<text x="511" y="72" font-family="IBM Plex Mono" font-size="6.5" fill="#d0f0a0" text-anchor="middle">CADUCOS — sombra verano · sol invierno</text>
+
+<!-- CAM-3: cobertura perímetro casa padres (esquina noroeste) -->
+<rect x="188" y="134" width="28" height="16" rx="2" fill="#1a1a2e" stroke="#4a9eff" stroke-width="1.5"/>
+<circle cx="199" cy="142" r="4" fill="none" stroke="#4a9eff" stroke-width="1.2"/>
+<circle cx="199" cy="142" r="1.5" fill="#4a9eff" opacity="0.7"/>
+<path d="M216,142 L260,120 L290,120 L260,142 Z" fill="#4a9eff" opacity="0.09" stroke="#4a9eff" stroke-width="0.4" stroke-dasharray="2,2"/>
+<rect x="166" y="119" width="72" height="10" rx="2" fill="#1a1a2e" opacity="0.88"/>
+<text x="202" y="127" font-family="IBM Plex Mono" font-size="7" fill="#4a9eff" text-anchor="middle">📷 CAM-3 · PADRES</text>
+
+<!-- FOCO-3: iluminación perímetro casa padres -->
+<circle cx="136" cy="152" r="8" fill="#ffdd44" opacity="0.9" stroke="#cc9900" stroke-width="1.5"/>
+<circle cx="136" cy="152" r="20" fill="#ffdd44" opacity="0.06" stroke="#ffdd44" stroke-width="0.5" stroke-dasharray="3,3"/>
+<text x="136" y="174" font-family="IBM Plex Mono" font-size="6.5" fill="#aa7700" text-anchor="middle">💡 FOCO-3</text>
+
+<!-- Frutales zona padres (fondo este) -->
+<use href="#TF" x="375" y="420" width="24" height="26"/>
+<use href="#TF" x="436" y="420" width="24" height="26"/>
+<use href="#TF" x="497" y="420" width="24" height="26"/>
+<use href="#TF" x="558" y="420" width="24" height="26"/>
+<use href="#TF" x="619" y="420" width="24" height="26"/>
+<use href="#TF" x="375" y="490" width="24" height="26"/>
+<use href="#TF" x="436" y="490" width="24" height="26"/>
+<use href="#TF" x="497" y="490" width="24" height="26"/>
+<use href="#TF" x="558" y="490" width="24" height="26"/>
+<use href="#TF" x="619" y="490" width="24" height="26"/>
+<use href="#TF" x="375" y="560" width="24" height="26"/>
+<use href="#TF" x="436" y="560" width="24" height="26"/>
+<use href="#TF" x="497" y="560" width="24" height="26"/>
+<use href="#TF" x="558" y="560" width="24" height="26"/>
+<use href="#TF" x="619" y="560" width="24" height="26"/>
+<use href="#TF" x="375" y="630" width="24" height="26"/>
+<use href="#TF" x="436" y="630" width="24" height="26"/>
+<use href="#TF" x="497" y="630" width="24" height="26"/>
+<use href="#TF" x="558" y="630" width="24" height="26"/>
+<use href="#TF" x="619" y="630" width="24" height="26"/>
+<rect x="415" y="700" width="170" height="22" rx="2" fill="#f0ebe0" opacity="0.9"/>
+<text x="500" y="711" font-family="IBM Plex Mono" font-size="8" fill="#4a3a10" text-anchor="middle" font-weight="600">FRUTALES ESTE · Palto/Naranjo</text>
+<text x="500" y="720" font-family="IBM Plex Mono" font-size="7" fill="#6a5a28" text-anchor="middle">Limonero · Ciruela · Manzano</text>
+
+<!-- ═══════════════════════════════════════════════
+     BORDE TERRENO
+═══════════════════════════════════════════════ -->
+<rect x="80" y="60" width="620" height="1904" fill="none" stroke="#0a1a0a" stroke-width="3.5"/>
+
+<!-- ═══════════════════════════════════════════════
+     DIMENSIONES
+═══════════════════════════════════════════════ -->
+<!-- Ancho 49m -->
+<line x1="80" y1="1985" x2="700" y2="1985" stroke="#666" stroke-width="1.2" marker-start="url(#arrR)" marker-end="url(#arr)"/>
+<rect x="326" y="1977" width="108" height="14" rx="2" fill="#ede8dc"/>
+<text x="380" y="1988" font-family="IBM Plex Mono" font-size="9" fill="#333" text-anchor="middle" font-weight="600">49 metros (FRENTE)</text>
+<!-- Marcas 10m ancho -->
+<g font-family="IBM Plex Mono" font-size="7" fill="#888">
+  <line x1="80" y1="1964" x2="80" y2="1970" stroke="#888" stroke-width="1"/>
+  <text x="80" y="1978" text-anchor="middle">0</text>
+  <line x1="207" y1="1964" x2="207" y2="1970" stroke="#888" stroke-width="1"/>
+  <text x="207" y="1978" text-anchor="middle">10</text>
+  <line x1="333" y1="1964" x2="333" y2="1970" stroke="#888" stroke-width="1"/>
+  <text x="333" y="1978" text-anchor="middle">20</text>
+  <line x1="460" y1="1964" x2="460" y2="1970" stroke="#888" stroke-width="1"/>
+  <text x="460" y="1978" text-anchor="middle">30</text>
+  <line x1="587" y1="1964" x2="587" y2="1970" stroke="#888" stroke-width="1"/>
+  <text x="587" y="1978" text-anchor="middle">40</text>
+  <line x1="700" y1="1964" x2="700" y2="1970" stroke="#888" stroke-width="1"/>
+  <text x="700" y="1978" text-anchor="middle">49</text>
+</g>
+
+<!-- Largo 128m (eje vertical izquierdo) -->
+<line x1="42" y1="60" x2="42" y2="1964" stroke="#666" stroke-width="1.2" marker-start="url(#arrR)" marker-end="url(#arr)"/>
+<rect x="14" y="980" width="26" height="70" rx="2" fill="#ede8dc"/>
+<text x="27" y="1015" font-family="IBM Plex Mono" font-size="8" fill="#333" text-anchor="middle" font-weight="600" writing-mode="vertical-rl" transform="rotate(180,27,1010)">128 m</text>
+<!-- Marcas 10m largo -->
+<g font-family="IBM Plex Mono" font-size="7" fill="#888">
+  <line x1="80" y1="60" x2="73" y2="60" stroke="#888" stroke-width="1"/>
+  <text x="70" y="63" text-anchor="end">128</text>
+  <line x1="80" y1="209" x2="73" y2="209" stroke="#888" stroke-width="1"/>
+  <text x="70" y="212" text-anchor="end">118</text>
+  <line x1="80" y1="358" x2="73" y2="358" stroke="#888" stroke-width="1"/>
+  <text x="70" y="361" text-anchor="end">108</text>
+  <line x1="80" y1="506" x2="73" y2="506" stroke="#888" stroke-width="1"/>
+  <text x="70" y="509" text-anchor="end">98</text>
+  <line x1="80" y1="655" x2="73" y2="655" stroke="#888" stroke-width="1"/>
+  <text x="70" y="658" text-anchor="end">88</text>
+  <line x1="80" y1="804" x2="73" y2="804" stroke="#888" stroke-width="1"/>
+  <text x="70" y="807" text-anchor="end">78</text>
+  <line x1="80" y1="952" x2="73" y2="952" stroke="#888" stroke-width="1"/>
+  <text x="70" y="955" text-anchor="end">68</text>
+  <line x1="80" y1="1101" x2="73" y2="1101" stroke="#888" stroke-width="1"/>
+  <text x="70" y="1104" text-anchor="end">58</text>
+  <line x1="80" y1="1250" x2="73" y2="1250" stroke="#888" stroke-width="1"/>
+  <text x="70" y="1253" text-anchor="end">48</text>
+  <line x1="80" y1="1399" x2="73" y2="1399" stroke="#888" stroke-width="1"/>
+  <text x="70" y="1402" text-anchor="end">38</text>
+  <line x1="80" y1="1547" x2="73" y2="1547" stroke="#888" stroke-width="1"/>
+  <text x="70" y="1550" text-anchor="end">28</text>
+  <line x1="80" y1="1696" x2="73" y2="1696" stroke="#888" stroke-width="1"/>
+  <text x="70" y="1699" text-anchor="end">18</text>
+  <line x1="80" y1="1845" x2="73" y2="1845" stroke="#888" stroke-width="1"/>
+  <text x="70" y="1848" text-anchor="end">8</text>
+  <line x1="80" y1="1964" x2="73" y2="1964" stroke="#888" stroke-width="1"/>
+  <text x="70" y="1967" text-anchor="end">0</text>
+</g>
+<text x="56" y="1010" font-family="IBM Plex Mono" font-size="8" fill="#888" text-anchor="middle" writing-mode="vertical-rl" transform="rotate(180,56,1010)">Profundidad desde entrada (metros)</text>
+
+<!-- ═══════════════════════════════════════════════
+     ROSA DE LOS VIENTOS + ESCALA
+═══════════════════════════════════════════════ -->
+<g transform="translate(718,1840)">
+  <circle cx="0" cy="0" r="36" fill="#ede8dc" stroke="#8a7a60" stroke-width="1.5"/>
+  <circle cx="0" cy="0" r="2.5" fill="#1a1a1a"/>
+  <!-- Norte = izquierda del plano = ARRIBA en la rosa -->
+  <line x1="0" y1="-2" x2="0" y2="-28" stroke="#c85a10" stroke-width="2.5" marker-end="url(#arrN)"/>
+  <text x="0" y="-20" font-family="IBM Plex Mono" font-size="12" fill="#c85a10" text-anchor="middle" font-weight="700">N</text>
+  <line x1="0" y1="2" x2="0" y2="27" stroke="#555" stroke-width="1.2"/>
+  <text x="0" y="35" font-family="IBM Plex Mono" font-size="9" fill="#777" text-anchor="middle">S</text>
+  <!-- Este = fondo = derecha del plano en vista horizontal -->
+  <line x1="2" y1="0" x2="27" y2="0" stroke="#555" stroke-width="1.2"/>
+  <text x="34" y="4" font-family="IBM Plex Mono" font-size="9" fill="#777">E</text>
+  <line x1="-2" y1="0" x2="-27" y2="0" stroke="#555" stroke-width="1.2"/>
+  <text x="-34" y="4" font-family="IBM Plex Mono" font-size="9" fill="#777">O</text>
+  <text x="0" y="52" font-family="IBM Plex Mono" font-size="7" fill="#8a7a60" text-anchor="middle">N=IZQUIERDA</text>
+  <text x="0" y="61" font-family="IBM Plex Mono" font-size="7" fill="#8a7a60" text-anchor="middle">E=FONDO</text>
+</g>
+
+<!-- Escala gráfica -->
+<g transform="translate(706,1700)">
+  <text x="0" y="-6" font-family="IBM Plex Mono" font-size="8" fill="#666">ESCALA 1:250</text>
+  <rect x="0" y="0" width="13" height="9" fill="#2a2a2a"/>
+  <rect x="13" y="0" width="13" height="9" fill="#ede8dc" stroke="#2a2a2a" stroke-width="0.8"/>
+  <rect x="26" y="0" width="13" height="9" fill="#2a2a2a"/>
+  <rect x="39" y="0" width="13" height="9" fill="#ede8dc" stroke="#2a2a2a" stroke-width="0.8"/>
+  <line x1="0" y1="0" x2="0" y2="-3" stroke="#2a2a2a" stroke-width="1"/>
+  <line x1="52" y1="0" x2="52" y2="-3" stroke="#2a2a2a" stroke-width="1"/>
+  <text x="0" y="18" font-family="IBM Plex Mono" font-size="7" fill="#666">0</text>
+  <text x="48" y="18" font-family="IBM Plex Mono" font-size="7" fill="#666">10m</text>
+</g>
+
+<!-- ═══════════════════════════════════════════════
+     TÍTULO INTERNO
+═══════════════════════════════════════════════ -->
+<rect x="706" y="60" width="46" height="1620" fill="#e8e2d8" opacity="0.5"/>
+<text x="729" y="870" font-family="IBM Plex Mono" font-size="9" fill="#4a3a20" text-anchor="middle" writing-mode="vertical-rl" transform="rotate(180,729,870)" letter-spacing="2">MASTER PLAN FINAL · PARCELA 71 · ISLA DE MAIPO · REGIÓN METROPOLITANA · HACIENDA VIÑAS DEL MAIPO</text>
+
+</svg>
+</div>
+
+<!-- LEYENDA -->
+<div class="legend-grid">
+  <div class="li"><div class="lc" style="background:#ffe8b0;border-color:#d4a020;"></div>ZONA 1 — ACCESO · 12 ESTAC. GRAVA ESTABILIZADA + PÉRGOLA</div>
+  <div class="li"><div class="lc" style="background:#d8ecc8;border-color:#4a8a30;"></div>ZONA 2 — VIVIENDA · PISCINA · QUINCHO · CONTAINER BAÑO</div>
+  <div class="li"><div class="lc" style="background:#c0e898;border-color:#2a7a2a;"></div>ZONA 3 — DEPORTIVA · CANCHA MULTIUSO 25×15m (975m²)</div>
+  <div class="li"><div class="lc" style="background:#d0e8a0;border-color:#7a8a20;"></div>ZONA 4 — PRODUCCIÓN · HUERTO · GALLINERO · FOSA SÉPTICA</div>
+  <div class="li"><div class="lc" style="background:#e8d8f0;border-color:#7a4a9a;"></div>ZONA 5 — CASA PADRES 120m² · ESTAC. P1-P3 · PASTO (1,200m²)</div>
+  <div class="li"><div class="lc" style="background:#cdc4ad;border-color:#8a7a60;"></div>CAMINO LATERAL DERECHO 4m — GRAVA ESTABILIZADA (permeable)</div>
+  <div class="li"><div class="lc" style="background:#2a6020;border-color:#1a4010;"></div>BARRERA FORESTAL SUR — QUILLAYES/PEUMOS (viento y polvo)</div>
+  <div class="li"><div class="lc" style="background:#7ab840;"></div>ÁRBOLES CADUCOS NORTE — sombra verano / sol invierno (bioclimático)</div>
+  <div class="li"><div class="lc" style="background:#d4a030;"></div>FRUTALES ESTE — Palto · Naranjo · Limonero · Ciruela · Manzano</div>
+  <div class="li"><div class="lc" style="background:#1a1a2e;border-color:#4a9eff;"></div>📷 CÁMARAS 4G SOLAR ×3 — CAM-1 Portón · CAM-2 Casa · CAM-3 Padres</div>
+  <div class="li"><div class="lc" style="background:#1a1a10;border-color:#ffdd44;"></div>💡 FOCOS SOLARES ×3 — FOCO-1 Portón · FOCO-2 Vivienda · FOCO-3 Padres</div>
+  <div class="li"><div class="lc" style="background:#e8dac0;border-style:dashed;border-color:#8a6a20;"></div>FOSA SÉPTICA · 🚛 ACCESO LIMPIAFOSAS · ≥5m casa</div>
+</div>
+
+<div class="footer">
+  <span>PARCELA 71 · ISLA DE MAIPO · REGIÓN METROPOLITANA · CHILE</span>
+  <span>MASTER PLAN v5.2 · ESCALA 1:250 · 6,272 m² · 5 ZONAS · © ABRIL 2026</span>
+</div>
+
+</div>
+</body>
+</html>
